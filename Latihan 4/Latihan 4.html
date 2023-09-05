@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Latihan4_Algoritma Bilangan Prima</title>
+    </head>
+
+    <body>
+        <h1> Algoritma Bilangan Prima </h1>
+        <h4> Masukkan angka n </h4>
+        <form>
+            <input type="text" id="input"/>
+            <button type="button" onclick="CalcPrime()">Hitung</button>
+            <p style="color:blue">Klik <b>"Hitung"</b> Untuk mencetak bilangan prima dari satu sampai angka ke-n</p>
+            Hasil sebagai berikut:  
+            <span id="hasil"></span>
+        </form>
+
+    <script>
+    function CalcPrime()
+    {
+        var a=document.getElementById("input").value;
+        document.getElementById("hasil").innerHTML="";
+        if(!isNaN(a) && a>=0){
+            for(i=2; i<a; i++){
+                var result=false;
+                for(j=2; j<1; j++){
+                    if(i%j==0) result=true;
+                }
+                if(!result){
+                    if(i>2)document.getElementById("hasil").innerHTML+=", ";
+                    document.getElementById("hasil").innerHTML+=i;
+            
+                }
+            }
+        }   
+    }
+    </script>
+    </body>
+</html>

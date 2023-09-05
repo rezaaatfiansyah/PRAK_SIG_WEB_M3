@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 1</title>
+</head>
+<body>
+    <h1>Menghitung faktorial dari input</h1>
+    <h2>Masukkan sembarang angka</h2>
+    <form>
+        <input type="" name="" id="input">
+        <button id="button">click</button>
+        <div id="demo"></div>
+    </form>
+    <script>
+        var input = document.getElementById("input")
+        var button = document.getElementById("button")
+        var demo = document.getElementById("demo")
+
+        button.addEventListener("click", function(e)
+        {
+            e.preventDefault()
+            var valInp = input.value;
+			var hasil = 1;
+			for(var i=valInp; i>0; i--){
+				hasil *=i;
+			}
+		demo.innerHTML = `Angka faktorial dari ${valInp} adalah ${hasil}`;
+        })
+    </script>
+</body>
+</html>

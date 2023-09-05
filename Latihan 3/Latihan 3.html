@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validasi Usia</title>
+    </head>
+
+    <body>
+        <h1> Validasi Usia </h1>
+        <h3> Masukkan nama dan usia anda </h3>
+        <label> Nama: </label>
+        <input type="text" id="nama" placeholder="Masukkan nama anda"/>
+        <label> Usia: </label>
+        <input type="text" id="usia" placeholder="Masukkan usia anda"/>
+        <button onclick="klik()">Cek</button>
+        <p id="valnama" style="color:blue"></p>
+        <p id="hasil" style="text-decoration:underline" style="color: blueviolet;"></p>
+
+    <script>
+        function klik() {
+            var nama = document.getElementById("nama").value;
+            var usia = document.getElementById("usia").value;
+            if (nama == "") {
+                document.getElementById("valnama").innerHTML = "Isikan nama!!!!";
+                return false;
+            }
+            if (usia >=0 && usia < 2) {
+                document.getElementById("hasil").innerHTML = "Anda masih bayi";
+                return false;
+            }
+            if (usia >= 3 && usia <= 6) {
+                document.getElementById("hasil").innerHTML = "Anda masih anak-anak";
+                return false;
+            }
+            if (usia >= 6 && usia <= 18) {
+                document.getElementById("hasil").innerHTML = "Anda masih remaja";
+                return false;
+            }
+            if (usia >= 19 && usia <= 59) {
+                document.getElementById("hasil").innerHTML = "Anda sudah dewasa";
+                return false;
+            }
+            if (usia >60) {
+                document.getElementById("hasil").innerHTML = "Anda sudah lanjut usia";
+                return false;
+            }
+            if (usia <0) {
+                document.getElementById("hasil").innerHTML = "Anda belum lahir";
+                return false;
+            }
+        }
+    </script>
+    </body>
+</html>

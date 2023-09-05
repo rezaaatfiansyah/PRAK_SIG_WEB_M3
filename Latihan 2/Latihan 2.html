@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 2</title>
+</head>
+<body>
+    <h1>Validasi Input</h1>
+    <p>Masukkan nama, password dan alamat email anda:</p>
+    <div class="login">
+        <div id="error" class="alert alert-danger" role="alert">
+    </div>
+    <form action="#" method="get" id="form">
+        <label>Nama:</label>
+        <input type="text" name="nama" placeholder="Masukkan Nama Anda"/><br>
+        <label>Password:</label>
+        <input type="text" name="password" placeholder="Masukkan Password Anda"/><br>
+        <label>E-mail:</label>
+        <input type="text" name="email" placeholder="Masukkan Email Anda"/><br>
+        <input onclick="login()" type="button" value="Klik" class="tombol">
+    </form>
+    </div>
+<script>
+    function login()
+    {
+        var nama = document.forms["form"]["nama"].value;
+        var password = document.forms["form"]["password"].value;
+        var email = document.forms["form"]["email"].value;
+            if (nama == "") {
+                alert("Isikan nama Anda!");
+                return false;
+            }
+            if (email == "") {
+                alert("Isikan email Anda!");
+                return false;
+            }
+            if (password == "sss") {
+                alert("Anda berhasil Login!");
+            }
+            else{
+                alert("Password Salah!");
+                return false;
+            }
+    }
+</script>
+</div>
+</body>
+</html>
